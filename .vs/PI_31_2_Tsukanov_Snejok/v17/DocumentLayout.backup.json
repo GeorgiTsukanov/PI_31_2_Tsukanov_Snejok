@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\georg\\Downloads\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\",
+  "WorkspaceRootPath": "E:\\PI_31_2_Tsukanov_Snejok\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|c:\\users\\georg\\downloads\\pi_31_2_tsukanov_snejok\\pi_31_2_tsukanov_snejok\\pi_31_2_tsukanov_snejok\\neuronet\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|e:\\pi_31_2_tsukanov_snejok\\pi_31_2_tsukanov_snejok\\neuronet\\layers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|solutionrelative:pi_31_2_tsukanov_snejok\\neuronet\\layers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|e:\\pi_31_2_tsukanov_snejok\\pi_31_2_tsukanov_snejok\\neuronet\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|solutionrelative:pi_31_2_tsukanov_snejok\\neuronet\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|C:\\Users\\georg\\Downloads\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\pi_31_2_tsukanov_snejok\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|E:\\PI_31_2_Tsukanov_Snejok\\pi_31_2_tsukanov_snejok\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCABCFBD-7EE9-4445-9E5F-B7326EA4C89E}|PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok.csproj|solutionrelative:pi_31_2_tsukanov_snejok\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,15 +22,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Layers.cs",
+              "DocumentMoniker": "E:\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\NeuroNet\\Layers.cs",
+              "RelativeDocumentMoniker": "PI_31_2_Tsukanov_Snejok\\NeuroNet\\Layers.cs",
+              "ToolTip": "E:\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\NeuroNet\\Layers.cs",
+              "RelativeToolTip": "PI_31_2_Tsukanov_Snejok\\NeuroNet\\Layers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T20:17:58.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormMain.cs",
-              "DocumentMoniker": "C:\\Users\\georg\\Downloads\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\FormMain.cs",
+              "DocumentMoniker": "E:\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\FormMain.cs",
               "RelativeDocumentMoniker": "PI_31_2_Tsukanov_Snejok\\FormMain.cs",
-              "ToolTip": "C:\\Users\\georg\\Downloads\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\FormMain.cs",
+              "ToolTip": "E:\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\FormMain.cs",
               "RelativeToolTip": "PI_31_2_Tsukanov_Snejok\\FormMain.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAADwvzIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -34,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Neuron.cs",
-              "DocumentMoniker": "C:\\Users\\georg\\Downloads\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\NeuroNet\\Neuron.cs",
+              "DocumentMoniker": "E:\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\NeuroNet\\Neuron.cs",
               "RelativeDocumentMoniker": "PI_31_2_Tsukanov_Snejok\\NeuroNet\\Neuron.cs",
-              "ToolTip": "C:\\Users\\georg\\Downloads\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\NeuroNet\\Neuron.cs",
+              "ToolTip": "E:\\PI_31_2_Tsukanov_Snejok\\PI_31_2_Tsukanov_Snejok\\NeuroNet\\Neuron.cs",
               "RelativeToolTip": "PI_31_2_Tsukanov_Snejok\\NeuroNet\\Neuron.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswB0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswAMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-29T16:09:53.385Z",
               "EditorCaption": ""
