@@ -15,7 +15,7 @@ namespace PI_31_2_Tsukanov_Snejok
 {
     public partial class FormMain : Form
     {
-        HiddenLayer test; //для тестирования 
+        HiddenLayer test; //для тестирования генерации весов
 
         double[] inputPixels;
         public FormMain()
@@ -56,10 +56,10 @@ namespace PI_31_2_Tsukanov_Snejok
             File.AppendAllText(path, tmpStr);
         }
 
-        private void TestButton_Click(object sender, EventArgs e)
+        private void TestButton_Click(object sender, EventArgs e) //для тестирования генерации весов
         {
             test = new HiddenLayer(9, 7, NeuronType.Hidden, nameof(test));
-            test.WeightInitialize(MemoryMode.SET, "test.csv");
+            test.WeightInitialize(MemoryMode.SET, AppDomain.CurrentDomain.BaseDirectory + "memory\\test_memory.csv");
         }
     }
 }

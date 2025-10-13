@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PI_31_2_Tsukanov_Snejok.NeuroNet
 {

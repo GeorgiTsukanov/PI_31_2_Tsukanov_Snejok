@@ -41,3 +41,14 @@ C:\Users\georg\Downloads\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\PI_31_2
 C:\Users\georg\Downloads\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\bin\Debug\PI_31_2_Tsukanov_Snejok.exe.config
 C:\Users\georg\Downloads\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\bin\Debug\PI_31_2_Tsukanov_Snejok.exe
 C:\Users\georg\Downloads\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\bin\Debug\PI_31_2_Tsukanov_Snejok.pdb
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\bin\Debug\PI_31_2_Tsukanov_Snejok.exe.config
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\bin\Debug\PI_31_2_Tsukanov_Snejok.exe
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\bin\Debug\PI_31_2_Tsukanov_Snejok.pdb
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.csproj.AssemblyReference.cache
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.exe.config
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.FormMain.resources
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.Properties.Resources.resources
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.csproj.GenerateResource.cache
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.csproj.CoreCompileInputs.cache
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.exe
+E:\PI_31_2_Tsukanov_Snejok\PI_31_2_Tsukanov_Snejok\obj\Debug\PI_31_2_Tsukanov_Snejok.pdb

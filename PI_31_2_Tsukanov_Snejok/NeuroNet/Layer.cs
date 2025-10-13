@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -35,13 +36,15 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
             numofprevneurons = nopn;
             Neurons = new Neuron[non];
             name_Layer = nm_Layers;
-            pathDirWeights = AppDomain.CurrentDomain.BaseDirectory + "memory\\";
+            pathDirWeights = AppDomain.CurrentDomain.BaseDirectory + "memory//";
             pathFileWeights = pathDirWeights + name_Layer + "_memory.csv";
             lastdeltaweights = new double[non, nopn + 1];
             double[,] Weights;
 
             if (File.Exists(pathFileWeights))
+            {
                 Weights = WeightInitialize(MemoryMode.GET, pathFileWeights);
+            }
             else
             {
                 Directory.CreateDirectory(pathDirWeights);
@@ -58,8 +61,7 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
                 }
                 Neurons[i] = new Neuron(tmp_weights, nt);
             }
-                
-    
+
     }
         public double[,] WeightInitialize(MemoryMode mm, string path)
         {
@@ -104,7 +106,8 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
                     {
                         for (int j = 0; j < numofprevneurons + 1; j++)
                         {
-                            weights[i, j] = rand.NextDouble();
+                            //weights[i, j] = rand.NextDouble();
+                            weights[i, j] = GenerateNormalRandom(rand, 0, 1);
                         }
                     }
                     break;
@@ -112,6 +115,13 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
             return weights;
         }
 
-
+        private double GenerateNormalRandom(Random rand, double mean, double stdDev)
+        {
+            double u1 = 1.0 - rand.NextDouble();
+            double u2 = 1.0 - rand.NextDouble();
+            double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) *
+                                 Math.Sin(2.0 * Math.PI * u2);
+            return mean + stdDev * randStdNormal;
+        }
     }
 }
