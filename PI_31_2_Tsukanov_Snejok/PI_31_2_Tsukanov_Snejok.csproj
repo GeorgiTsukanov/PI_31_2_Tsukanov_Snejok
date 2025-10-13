@@ -52,7 +52,8 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="NeuroNet\Layers.cs" />
+    <Compile Include="NeuroNet\HiddenLayer.cs" />
+    <Compile Include="NeuroNet\Layer.cs" />
     <Compile Include="NeuroNet\ModeleEnums.cs" />
     <Compile Include="NeuroNet\Neuron.cs" />
     <Compile Include="Program.cs" />
