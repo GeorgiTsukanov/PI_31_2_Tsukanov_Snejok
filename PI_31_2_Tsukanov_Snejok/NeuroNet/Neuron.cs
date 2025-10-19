@@ -54,9 +54,8 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
 
         public double LeakyRely_Derivativator(double z)
         {
-            if (z <= 0) return 0.1d;
+            if (z <= 0) return a;
             else return 1;
-
         }
     }
 }

@@ -123,5 +123,8 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
                                  Math.Sin(2.0 * Math.PI * u2);
             return mean + stdDev * randStdNormal;
         }
+
+        abstract public void Recognize(Network net, Layer nextLayer);
+        abstract public double[] BackwardPass(double[] stuff);
     }
 }

@@ -15,6 +15,7 @@ namespace PI_31_2_Tsukanov_Snejok
 {
     public partial class FormMain : Form
     {
+        private Network network;
         HiddenLayer test; //для тестирования генерации весов
 
         double[] inputPixels;
@@ -26,6 +27,7 @@ namespace PI_31_2_Tsukanov_Snejok
                 inputPixels[i] = 0;
             }
             InitializeComponent();
+            network = new Network();
         }
         private void Changing_State_Pixel_Button_Click(object sender, EventArgs e) // Обработчик данных для кнопки
         {
@@ -60,6 +62,13 @@ namespace PI_31_2_Tsukanov_Snejok
         {
             test = new HiddenLayer(9, 7, NeuronType.Hidden, nameof(test));
             test.WeightInitialize(MemoryMode.SET, AppDomain.CurrentDomain.BaseDirectory + "memory\\test_memory.csv");
+        }
+
+        private void button_Recognize_Click(object sender, EventArgs e)
+        {
+            network.ForwardPass(network, inputPixels);
+            label_Output.Text = network.Fact.ToList().IndexOf(network.Fact.Max()).ToString();
+            label_Probability.Text = (100 * network.Fact.Max()).ToString("0.00") + "%";
         }
     }
 }
