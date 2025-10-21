@@ -5,7 +5,7 @@
         private InputLayer inputLayer = new InputLayer();
         private HiddenLayer hidden_layer1 = new HiddenLayer(71, 15, NeuronType.Hidden, nameof(hidden_layer1));
         private HiddenLayer hidden_layer2 = new HiddenLayer(35, 71, NeuronType.Hidden, nameof(hidden_layer2));
-        private HiddenLayer output_layer = new HiddenLayer(10, 35, NeuronType.Output, nameof(output_layer));
+        private OutputLayer output_layer = new OutputLayer(10, 35, NeuronType.Output, nameof(output_layer));
 
         private double[] fact = new double[10];
         private double[] e_error_avr;
