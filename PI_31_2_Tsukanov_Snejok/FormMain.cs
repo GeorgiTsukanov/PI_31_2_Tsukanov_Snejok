@@ -70,5 +70,18 @@ namespace PI_31_2_Tsukanov_Snejok
             label_Output.Text = network.Fact.ToList().IndexOf(network.Fact.Max()).ToString();
             label_Probability.Text = (100 * network.Fact.Max()).ToString("0.00") + "%";
         }
+
+        private void ButtonTrain_Click(object sender, EventArgs e)
+        {
+            network.Train(network);
+            /*
+            for (int i = 0; i < network.E_error_avr.Length; i++)
+            {
+                chart_Eavr.Series[0].Points.AddY(network.E_error_avr[i]);
+            }
+            */
+
+            MessageBox.Show("обучение успешно завершено.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
