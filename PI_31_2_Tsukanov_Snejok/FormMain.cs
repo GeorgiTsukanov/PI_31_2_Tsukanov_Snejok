@@ -17,16 +17,15 @@ namespace PI_31_2_Tsukanov_Snejok
     {
         private Network network;
         HiddenLayer test; //для тестирования генерации весов
-
         double[] inputPixels;
         public FormMain()
         {
+            InitializeComponent();
             inputPixels = new double[15];
             for (int i = 0; i< 15; i++)
             {
                 inputPixels[i] = 0;
             }
-            InitializeComponent();
             network = new Network();
         }
         private void Changing_State_Pixel_Button_Click(object sender, EventArgs e) // Обработчик данных для кнопки
@@ -57,12 +56,14 @@ namespace PI_31_2_Tsukanov_Snejok
 
             File.AppendAllText(path, tmpStr);
         }
-
+        
+        
         private void TestButton_Click(object sender, EventArgs e) //для тестирования генерации весов
         {
             test = new HiddenLayer(9, 7, NeuronType.Hidden, nameof(test));
             test.WeightInitialize(MemoryMode.SET, AppDomain.CurrentDomain.BaseDirectory + "memory\\test_memory.csv");
         }
+        
 
         private void button_Recognize_Click(object sender, EventArgs e)
         {
@@ -74,13 +75,10 @@ namespace PI_31_2_Tsukanov_Snejok
         private void ButtonTrain_Click(object sender, EventArgs e)
         {
             network.Train(network);
-            /*
             for (int i = 0; i < network.E_error_avr.Length; i++)
             {
                 chart_Eavr.Series[0].Points.AddY(network.E_error_avr[i]);
             }
-            */
-
             MessageBox.Show("обучение успешно завершено.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

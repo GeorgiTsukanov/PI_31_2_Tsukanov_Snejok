@@ -1,6 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Net.Http.Headers;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Runtime.Serialization.Formatters;
 using System.Windows.Forms;
 
 namespace PI_31_2_Tsukanov_Snejok.NeuroNet
@@ -12,12 +14,13 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
         string pathFileWeights;
         protected int numofneurons;
         protected int numofprevneurons;
-        protected const double learningrate = 0.060;
-        protected const double momentum = 0.050d;
+        protected const double learningrate = 0.01;
+        protected const double momentum = 0.03d;
         protected double[,] lastdeltaweights;
         protected Neuron[] neurons;
 
         public Neuron[] Neurons { get => neurons; set => neurons = value; }
+
         public double[] Data
         {
             set
@@ -26,43 +29,46 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
                 {
                     Neurons[i].Activator(value);
                 }
-                   
             }
         }
 
-        protected Layer(int non, int nopn, NeuronType nt, string nm_Layers)
+        protected Layer(int non, int nopn, NeuronType nt, string nm_Layer)
         {
             numofneurons = non;
             numofprevneurons = nopn;
             Neurons = new Neuron[non];
-            name_Layer = nm_Layers;
-            pathDirWeights = AppDomain.CurrentDomain.BaseDirectory + "memory//";
+            name_Layer = nm_Layer;
+            pathDirWeights = AppDomain.CurrentDomain.BaseDirectory + "memory\\";
             pathFileWeights = pathDirWeights + name_Layer + "_memory.csv";
+
             lastdeltaweights = new double[non, nopn + 1];
             double[,] Weights;
 
             if (File.Exists(pathFileWeights))
-            {
                 Weights = WeightInitialize(MemoryMode.GET, pathFileWeights);
-            }
             else
             {
                 Directory.CreateDirectory(pathDirWeights);
                 Weights = WeightInitialize(MemoryMode.INIT, pathFileWeights);
             }
 
-            for(int i = 0; i < non; i++)
+            for (int i = 0; i < non; i++)
             {
                 double[] tmp_weights = new double[nopn + 1];
-                for(int j = 0; j < nopn + 1; j++)
+                for (int j = 0; j < nopn + 1; j++)
                 {
                     tmp_weights[j] = Weights[i, j];
-
+                    Neurons[i] = new Neuron(tmp_weights, nt);
                 }
-                Neurons[i] = new Neuron(tmp_weights, nt);
             }
 
-    }
+        }
+
+        // 1 - все синоптические веса должны быть случайными величинами
+        // 2 - для каждого нейрона мат. ожидание случайных величин должно равняться 0
+        // 3 - среднеквадратическое отклонение должно равняться 1
+
+
         public double[,] WeightInitialize(MemoryMode mm, string path)
         {
             char[] delim = new char[] { ';', ' ' };
@@ -106,25 +112,18 @@ namespace PI_31_2_Tsukanov_Snejok.NeuroNet
                     {
                         for (int j = 0; j < numofprevneurons + 1; j++)
                         {
-                            //weights[i, j] = rand.NextDouble();
-                            weights[i, j] = GenerateNormalRandom(rand, 0, 1);
+                            weights[i, j] = rand.NextDouble() - 0.5;
                         }
                     }
                     break;
             }
+
             return weights;
         }
 
-        private double GenerateNormalRandom(Random rand, double mean, double stdDev)
-        {
-            double u1 = 1.0 - rand.NextDouble();
-            double u2 = 1.0 - rand.NextDouble();
-            double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) *
-                                 Math.Sin(2.0 * Math.PI * u2);
-            return mean + stdDev * randStdNormal;
-        }
+        abstract public void Recognize(Network net, Layer nextLayer); // для прямых проходов
+        abstract public double[] BackwardPass(double[] stuff); // для обратного распространения
 
-        abstract public void Recognize(Network net, Layer nextLayer);
-        abstract public double[] BackwardPass(double[] stuff);
+
     }
 }
